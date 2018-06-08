@@ -53,11 +53,32 @@
     createhome: yes
 
 ## Sudoers config ##
+# - name: Copy sudoers file for safety
+#   command: cp -f /etc/sudoers /etc/sudoers.tmp
+
 - name: Copy sudoers file for safety
-  command: cp -f /etc/sudoers /etc/sudoers.tmp
+  become: yes
+  copy: 
+    src: /etc/sudoers
+    dest: /etc/sudoers.tmp
+    remote_src: true
+    backup: yes 
+    owner: root
+    group: root
+    mode: 0644
+    validate: /usr/sbin/visudo -cf %s
 
 - name: Create sudoers file backup
-  command: cp -f /etc/sudoers /etc/sudoers.bak
+  become: yes
+  copy: 
+    src: /etc/sudoers
+    dest: /etc/sudoers.bak
+    remote_src: true
+    backup: yes 
+    owner: root
+    group: root
+    mode: 0644
+    validate: /usr/sbin/visudo -cf %s
 
 - name: configure sudoers for Devops
   lineinfile:   dest=/etc/sudoers.d/ansible
