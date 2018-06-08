@@ -1,0 +1,7 @@
+---
+- name: Install & configure SSH on servers
+  gather_facts: True
+  sudo: yes
+  hosts: default
+  roles:
+  - { role: ssh-devops,   tags: ['ssh-user'] }
