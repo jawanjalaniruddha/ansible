@@ -1,0 +1,15 @@
+---
+- name: install unzip net-tools CentOS
+  yum: package={{item}} state=installed
+  with_items:
+    - epel-release
+    - unzip
+    - net-tools
+    - vim 
+    - wget
+    - sysstat
+    - telnet
+    - htop    
+    - python-pip 
+    - smem
+  
