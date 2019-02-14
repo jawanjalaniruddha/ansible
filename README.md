@@ -49,6 +49,11 @@ Where,
 ansible all -m ping
 ```
 
+### Creating a new role
+```
+ansible-galaxy init test-role-1
+```
+
 ### To install Ansible Galaxy role: 
 ```
 ansible-galaxy install --roles-path . geerlingguy.apache
@@ -59,3 +64,17 @@ ansible-galaxy install --roles-path . geerlingguy.apache
 ansible-playbook foo.yml --check --diff
 ```
 
+### Limiting task with tags
+```
+ansible-playbook playbooks/PLAYBOOK_NAME.yml --tags 'install'
+```
+
+### Skip roles with Tags matching
+```
+ansible-playbook playbooks/PLAYBOOK_NAME.yml --skip-tags 'sudoers'
+```
+
+### Checking 
+```
+ansible-playbook playbooks/PLAYBOOK_NAME.yml --syntax-check
+```
