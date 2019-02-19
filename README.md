@@ -83,7 +83,7 @@ ansible-playbook playbooks/PLAYBOOK_NAME.yml --syntax-check
 
 ## Ansible with Vagrant 
 
-### https://docs.ansible.com/ansible/latest/scenario_guides/guide_vagrant.html
+https://docs.ansible.com/ansible/latest/scenario_guides/guide_vagrant.html
 
 
 We will be using vagrant provisioner. For the first time, you will need to do `vagrant up` to get vagrant started with Vagrantfile in place. 
