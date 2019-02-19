@@ -1,6 +1,6 @@
 ---
 - name: install unzip net-tools CentOS
-  yum: package={{item}} state=installed
+  yum: package={{item}} state=present
   with_items:
     - epel-release
     - unzip

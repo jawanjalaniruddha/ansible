@@ -4,4 +4,5 @@
   sudo: yes
   hosts: default
   roles:
-  - { role: ssh-devops,   tags: ['ssh-user'] }
+    - { role: ssh-devops,   tags: ['ssh-user'] }
+#    - { role: sys-manager,  tags: ['ssh-user'] }

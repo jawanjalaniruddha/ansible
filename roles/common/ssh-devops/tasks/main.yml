@@ -99,5 +99,5 @@
     dest: /etc/sudoers
     line: 'deploy ALL=(ALL) NOPASSWD: ALL'
     state: present
-    validate: '/usr/sbin/visudos -cf %s'
+    validate: '/usr/sbin/visudo -cf %s'
 

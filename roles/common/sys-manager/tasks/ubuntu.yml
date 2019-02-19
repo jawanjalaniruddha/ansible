@@ -5,7 +5,7 @@
     cache_valid_time: 86400
 
 - name: install unzip net-tools for Ubuntu 
-  apt: package={{item}} state=installed
+  apt: package={{item}} state=present
   with_items:
     - unzip
     - net-tools
