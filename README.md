@@ -81,4 +81,23 @@ ansible-playbook playbooks/PLAYBOOK_NAME.yml --syntax-check
 
 --------------------------------------------------------------
 
-Testing README
+## Ansible with Vagrant 
+
+### https://docs.ansible.com/ansible/latest/scenario_guides/guide_vagrant.html
+
+
+We will be using vagrant provisioner. For the first time, you will need to do `vagrant up` to get vagrant started with Vagrantfile in place. 
+
+One issue that I faced was, vagrant machine didn't have python installed which is required for Ansible. So, I had to do `vagrant ssh`, install python and do `vagrant provision` again. Every time we make any change to playbook.yml, we will need to run `vagrant provision`.
+--------------------------------------------------------------
+
+## Ansible Config file
+
+`ansible.cfg` file is INI format file which contains configuration options for Ansible run. We prefer to keep it in the directory where project code is kept. Ansible will look for ansible.cfg file in following order.
+
+* `ANSIBLE_CONFIG` (environment variable if set)
+* `ansible.cfg` (in the current directory)
+* `~/.ansible.cfg` (in the home directory)
+* `/etc/ansible/ansible.cfg`
+
+Ansible will process the above list and use the first file found, all others are ignored. 
