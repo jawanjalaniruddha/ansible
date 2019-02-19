@@ -74,7 +74,11 @@ ansible-playbook playbooks/PLAYBOOK_NAME.yml --tags 'install'
 ansible-playbook playbooks/PLAYBOOK_NAME.yml --skip-tags 'sudoers'
 ```
 
-### Checking 
+### Checking Synatax
 ```
 ansible-playbook playbooks/PLAYBOOK_NAME.yml --syntax-check
 ```
+
+--------------------------------------------------------------
+
+Testing README
