@@ -107,8 +107,17 @@ One issue that I faced was, vagrant machine didn't have python installed which i
 
 --------------------------------------------------------------
 
-## Storing secrets in Ansible
+## Manipulating secrets in Ansible
 
-We can either use Ansible Vault or AWS SSM depending on the project requirement. Better approach would be to use Ansible Vault as this is piece of configuration management solution.
+We can either use Ansible Vault or AWS SSM or Hashicorp Vault depending on the project requirement. Better approach would be to use Ansible Vault as this is piece of configuration management solution. If we want to avoid any dependency on some specific tool, it would make more sense to use third party tool like Hashicorp Vault to store the secrets, credentials etc. 
+
+--------------------------------------------------------------
+
+### Ansible with Windows
+
+
+
+
+
 
 
