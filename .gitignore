@@ -5,3 +5,4 @@ vault_pass
 .vault_pass*
 *.log
 *.tfstate
+*.retry
