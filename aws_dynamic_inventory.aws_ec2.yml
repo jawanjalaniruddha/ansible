@@ -1,0 +1,22 @@
+plugin: amazon.aws.aws_ec2
+# profile: sami-aws
+
+aws_access_key: 
+aws_secret_key: 
+
+regions:
+  - us-east-1
+
+filters:
+  # All dev and QA hosts
+  tag:Environment:
+    - dev
+
+keyed_groups:
+  - key: tags
+    prefix: tag
+  - prefix: instance_type
+    key: instance_type
+  - key: placement.region
+    prefix: aws_region
+  
